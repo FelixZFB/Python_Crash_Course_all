@@ -38,7 +38,8 @@ class RandomWalk():
             # 得到第二个点（2,3）
             next_x = self.x_values[-1] + x_step
             next_y = self.y_values[-1] + y_step
-            
+
+            # 将每次得到一个点的x,y坐标加入到列表中
             self.x_values.append(next_x)
             self.y_values.append(next_y)
         

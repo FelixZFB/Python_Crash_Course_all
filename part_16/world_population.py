@@ -2,8 +2,7 @@
 # 详细见P325
 # 分析JSON文件
 
-import json 
-import pygal
+import json
 import pygal_maps_world
 from country_codes import get_country_code
 from pygal.style import LightColorizedStyle as LCS, RotateStyle as RS
@@ -49,17 +48,20 @@ for cc, pop in cc_population.items():
 # 看看每个分组包含多少个国家
 print(len(cc_pops_1), len(cc_pops_2), len(cc_pops_3), len(cc_pops_4))
 
-
-
+# 设置每个分组对应的颜色基调，33红色，66绿色，99蓝色
+# base_style=LCS参数用于加亮地图的颜色，因为pygal默认的是较暗的颜色主题
 wm_style = RS('#336699', base_style=LCS)
+# 传入上面自定义的地图显示风格
 wm = pygal_maps_world.maps.World(style=wm_style)
-
+# 设置标题
 wm.title = 'World Population in 2010, by Country'
+# 添加每个标签分类对应的国家人口的数据
 wm.add('0-10m', cc_pops_1)
 wm.add('10m-100m', cc_pops_2)
 wm.add('100m-1bn', cc_pops_3)
 wm.add('>1bn', cc_pops_4)
 
+# 输出文件
 wm.render_to_file('World_Population.svg')
  
 

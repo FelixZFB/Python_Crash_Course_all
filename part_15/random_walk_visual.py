@@ -6,10 +6,7 @@
 import matplotlib.pyplot as plt
 from random_walk import RandomWalk
 
-
-
 # 只要程序处于活动状态，就不断的模拟随机漫步
-
 while True:
     # 创建一个RandomWalk的实例
     rw = RandomWalk(10000)
@@ -33,7 +30,7 @@ while True:
     
     plt.show()
     
-    # 添加一个结束语句
+    # 添加一个break结束语句
     keep_running = input("Make another walk? (Y/N): ")
     if keep_running == 'N':
         break

@@ -2,9 +2,8 @@
 # 详细见P325
 # 分析JSON文件
 
-import json 
-import pygal
-import pygal_maps_world
+import json
+import pygal_maps_world.maps
 from country_codes import get_country_code
 from pygal.style import LightColorizedStyle as LCS, RotateStyle as RS
 

@@ -1,6 +1,6 @@
-# -*- coding: cp936 -*-
+ # -*- coding: cp936 -*-
 # 详细见P296
-# 随机漫步
+# 模拟投掷一个筛子结果的类
 
 from random import randint
 
